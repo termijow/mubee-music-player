@@ -6,7 +6,6 @@ const TestPage = () => {
 
   return (
     <div>
-      <h1>Prueba de Conexión con Spotify</h1>
       <TestSpotifyConnection token={token} setToken={setToken} />
     </div>
   );

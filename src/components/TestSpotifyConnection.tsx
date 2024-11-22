@@ -20,7 +20,7 @@ const TestSpotifyConnection: React.FC<TestSpotifyConnectionProps> = ({ token, se
       });
 
       const data = await response.json();
-
+      console.log(data);
       if (response.ok) {
         setStatus('Conexión exitosa');
         setUser(data.user); // Guardamos la información del usuario
@@ -53,8 +53,8 @@ const TestSpotifyConnection: React.FC<TestSpotifyConnectionProps> = ({ token, se
         <div className="user-details">
           <h2>Detalles del Usuario:</h2>
           <p><strong>Nombre:</strong> {user.display_name}</p>
-          <p><strong>Email:</strong> {user.email}</p>
-        </div>
+          <p><strong>Email:</strong> <a target='_blank' href={user.external_urls.spotify}>Enlace Spotify</a></p>
+          </div>
       )}
     </div>
   );
